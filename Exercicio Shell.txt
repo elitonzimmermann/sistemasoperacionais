@@ -1,0 +1,44 @@
+1 - 
+echo "Digite seu nome"
+read nome
+echo "$nome , bom dia"
+
+2 -  
+echo "Digite o primeiro numero"
+read primeiro
+echo "Digite o segundo numero"
+read segundo
+result=$(($primeiro*$segundo))
+echo "$primeiro * $segundo = $result"
+
+3 - 
+echo "Digite um numero"
+read numero
+if [ $numero -lt 0 ]; 
+then echo "Negativo"
+else 
+echo "Positivo" 
+fi
+
+4 - 
+echo "Digite um numero para exibir a tabuada"
+read numero
+i=1
+while [  $i -le 10  ]; 
+do result=$(($numero*$i))
+echo " $numero * $i = $result "            
+ y=$[ $i + 1 ]
+ done
+
+5 - 
+echo "Digite uma opcao"
+echo "1) Mostrar Calendario"
+echo "2) Lista de arquivos do diretório"
+read escolha
+if [ $escolha -eq 1 ];
+then cal 
+elif [ $escolha -eq 2 ];
+then ls
+else 
+echo "Escolha invalida"
+fi
